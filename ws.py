@@ -54,7 +54,7 @@ def on_open(ws):
 
 if __name__ == "__main__":
     websocket.enableTrace(True)
-    url = "ws://mobaai.smartstudy.com:7788"
+    url = ""
     ws = websocket.WebSocketApp(url,
                                 on_open=on_open,
                                 on_message=on_message,
