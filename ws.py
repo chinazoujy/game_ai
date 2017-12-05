@@ -3,7 +3,7 @@ import websocket
 import thread
 import time
 import json
-import ai
+import sm
 
 __author__ = 'zoujinyong'
 
@@ -18,7 +18,7 @@ def on_message(ws, message):
         pick_hero = '{"type": "pickHero", "heros": ["warrior", "warrior", "warrior", "warrior", "warrior"]}'
         ws.send(pick_hero)
     elif mess['type'] == "update":
-        cmds = ai.update(mess)
+        cmds = sm.update(mess)
         if cmds is None or len(cmds) == 0:
             return
 
